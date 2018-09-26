@@ -1,0 +1,114 @@
+﻿@model KolyadichiMVC.Models.KolCargo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KolCargo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FileName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransportNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransportNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SmgsNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SmgsNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SmgsDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SmgsDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeclarationNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeclarationNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeclarationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeclarationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempDislocationNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempDislocationNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempDislocationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempDislocationDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CargoUnitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

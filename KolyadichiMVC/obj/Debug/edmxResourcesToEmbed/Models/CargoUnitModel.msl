@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="xmlVagonsModelStoreContainer" CdmEntityContainer="xmlVagonsEntities">
+    <EntitySetMapping Name="KolCargoes">
+      <EntityTypeMapping TypeName="xmlVagonsModel.KolCargo">
+        <MappingFragment StoreEntitySet="KolCargo">
+          <ScalarProperty Name="CargoUnitID" ColumnName="CargoUnitID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="TransportNumber" ColumnName="TransportNumber" />
+          <ScalarProperty Name="SmgsNumber" ColumnName="SmgsNumber" />
+          <ScalarProperty Name="SmgsDate" ColumnName="SmgsDate" />
+          <ScalarProperty Name="DeclarationNumber" ColumnName="DeclarationNumber" />
+          <ScalarProperty Name="DeclarationDate" ColumnName="DeclarationDate" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="AccountDate" ColumnName="AccountDate" />
+          <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="TempDislocationNumber" ColumnName="TempDislocationNumber" />
+          <ScalarProperty Name="TempDislocationDate" ColumnName="TempDislocationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StepCargoes">
+      <EntityTypeMapping TypeName="xmlVagonsModel.StepCargo">
+        <MappingFragment StoreEntitySet="StepCargo">
+          <ScalarProperty Name="CargoUnitID" ColumnName="CargoUnitID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="TransportNumber" ColumnName="TransportNumber" />
+          <ScalarProperty Name="SmgsNumber" ColumnName="SmgsNumber" />
+          <ScalarProperty Name="SmgsDate" ColumnName="SmgsDate" />
+          <ScalarProperty Name="DeclarationNumber" ColumnName="DeclarationNumber" />
+          <ScalarProperty Name="DeclarationDate" ColumnName="DeclarationDate" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="AccountDate" ColumnName="AccountDate" />
+          <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="TempDislocationNumber" ColumnName="TempDislocationNumber" />
+          <ScalarProperty Name="TempDislocationDate" ColumnName="TempDislocationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
