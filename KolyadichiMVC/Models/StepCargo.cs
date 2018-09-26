@@ -12,7 +12,7 @@ namespace KolyadichiMVC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class StepCargo
+    public  class StepCargo
     {
         public int CargoUnitID { get; set; }
         public string FileName { get; set; }

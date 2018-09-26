@@ -1,99 +1,109 @@
 ﻿@model IEnumerable<KolyadichiMVC.Models.StepCargo>
-
+@*@model PagedList.IPagedList<KolyadichiMVC.Models.StepCargo>
+@using PagedList.Mvc;*@
+@*<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />*@
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Степянка";
 }
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<br />
+@using (Html.BeginForm())
+{
+    <div class="col-lg-4">
+        <div class="input-group">
+            <input type="search" class="form-control" id="searchString" name="searchString" placeholder="Номер СМГС или Регистрационный номер" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Поиск</button>
+            </span>
+        </div>
+        <br />
+    </div>
+}
 <table class="table">
     <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.FileName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TransportNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SmgsNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SmgsDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeclarationNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeclarationDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccountNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccountDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RegistrationNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RegistrationDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TempDislocationNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TempDislocationDate)
-        </th>
-        <th></th>
+                @Html.DisplayNameFor(model => model.TransportNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SmgsNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SmgsDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeclarationNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeclarationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempDislocationNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempDislocationDate)
+            </th>
+            <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FileName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TransportNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SmgsNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SmgsDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DeclarationNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DeclarationDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccountNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccountDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RegistrationNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RegistrationDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TempDislocationNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TempDislocationDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CargoUnitID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CargoUnitID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CargoUnitID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.TransportNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmgsNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmgsDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeclarationNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeclarationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempDislocationNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempDislocationDate)
+            </td>
+            @*<td>
+                    @Html.ActionLink("Details", "Details", new { id=item.CargoUnitID }) |
+                </td>*@
+        </tr>
+    }
 
 </table>
+@*Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@

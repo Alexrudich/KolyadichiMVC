@@ -1,19 +1,16 @@
 ﻿@model IEnumerable<KolyadichiMVC.Models.KolCargo>
+@*@model PagedList.IPagedList<KolyadichiMVC.Models.KolCargo>
+@using PagedList.Mvc;*@
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Колядичи";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FileName)
-        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>*@
         <th>
             @Html.DisplayNameFor(model => model.TransportNumber)
         </th>
@@ -50,50 +47,49 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FileName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TransportNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SmgsNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SmgsDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DeclarationNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DeclarationDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccountNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccountDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RegistrationNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RegistrationDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TempDislocationNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TempDislocationDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CargoUnitID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CargoUnitID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CargoUnitID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.TransportNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmgsNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmgsDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeclarationNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeclarationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempDislocationNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempDislocationDate)
+            </td>
+            @*<td>
+                    @Html.ActionLink("Details", "Details", new { id=item.CargoUnitID }) |
+                </td>*@
+        </tr>
+    }
 
 </table>

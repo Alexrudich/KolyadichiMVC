@@ -73,3 +73,7 @@ D:\Project-work\KolyadichiMVC\KolyadichiMVC\obj\Debug\KolyadichiMVC.csproj.CopyC
 D:\Project-work\KolyadichiMVC\KolyadichiMVC\obj\Debug\KolyadichiMVC.dll
 D:\Project-work\KolyadichiMVC\KolyadichiMVC\obj\Debug\KolyadichiMVC.pdb
 D:\Project-work\KolyadichiMVC\KolyadichiMVC\obj\Debug\KolyadichiMVC.csprojAssemblyReference.cache
+D:\Project-work\KolyadichiMVC\KolyadichiMVC\bin\PagedList.dll
+D:\Project-work\KolyadichiMVC\KolyadichiMVC\bin\PagedList.Mvc.dll
+D:\Project-work\KolyadichiMVC\KolyadichiMVC\bin\PagedList.xml
+D:\Project-work\KolyadichiMVC\KolyadichiMVC\bin\PagedList.Mvc.xml
