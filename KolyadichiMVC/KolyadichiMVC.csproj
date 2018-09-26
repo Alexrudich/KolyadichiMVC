@@ -240,15 +240,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\KolCargoes\Create.cshtml" />
-    <Content Include="Views\KolCargoes\Delete.cshtml" />
     <Content Include="Views\KolCargoes\Details.cshtml" />
-    <Content Include="Views\KolCargoes\Edit.cshtml" />
     <Content Include="Views\KolCargoes\Index.cshtml" />
-    <Content Include="Views\StepCargoes\Create.cshtml" />
-    <Content Include="Views\StepCargoes\Delete.cshtml" />
     <Content Include="Views\StepCargoes\Details.cshtml" />
-    <Content Include="Views\StepCargoes\Edit.cshtml" />
     <Content Include="Views\StepCargoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
