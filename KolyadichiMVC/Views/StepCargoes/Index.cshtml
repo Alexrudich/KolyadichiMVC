@@ -1,7 +1,7 @@
-﻿@model IEnumerable<KolyadichiMVC.Models.StepCargo>
-@*@model PagedList.IPagedList<KolyadichiMVC.Models.StepCargo>
-@using PagedList.Mvc;*@
-@*<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />*@
+﻿@*@model IEnumerable<KolyadichiMVC.Models.StepCargo>*@
+@model PagedList.IPagedList<KolyadichiMVC.Models.StepCargo>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "Степянка";
 }
@@ -20,51 +20,44 @@
 }
 <table class="table">
     <tr>
-        @*<th>
-                @Html.DisplayNameFor(model => model.FileName)
-            </th>*@
         <th>
-                @Html.DisplayNameFor(model => model.TransportNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SmgsNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SmgsDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeclarationNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeclarationDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AccountNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AccountDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RegistrationNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RegistrationDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDislocationNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDislocationDate)
-            </th>
-            <th></th>
+            Номер транспортного средства
+        </th>
+        <th>
+            Номер СМГС
+        </th>
+        <th>
+            Дата СМГС
+        </th>
+        <th>
+            Номер ТД
+        </th>
+        <th>
+            Дата ТД
+        </th>
+        <th>
+            Номер счета
+        </th>
+        <th>
+            Дата счета
+        </th>
+        <th>
+            Регистрационный номер ЭУРВ
+        </th>
+        <th>
+            Дата
+        </th>
+        <th>
+            Номер размещения на временное хранение
+        </th>
+        <th>
+            Дата помещения на временное хранение
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            @*<td>
-                    @Html.DisplayFor(modelItem => item.FileName)
-                </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.TransportNumber)
             </td>
@@ -98,12 +91,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.TempDislocationDate)
             </td>
-            @*<td>
-                    @Html.ActionLink("Details", "Details", new { id=item.CargoUnitID }) |
-                </td>*@
         </tr>
     }
 
 </table>
-@*Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@
+Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

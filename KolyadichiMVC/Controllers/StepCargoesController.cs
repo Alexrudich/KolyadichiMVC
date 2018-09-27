@@ -16,10 +16,9 @@ namespace KolyadichiMVC.Controllers
         private xmlVagonsEntities db = new xmlVagonsEntities();
 
         // GET: StepCargoes
-        public ActionResult Index(string searchString, int? page)
+        public ActionResult Index(string searchString, string currentFilter, int? page)
         {
             var stepCargoUnits = from s in db.StepCargoes select s;
-            //var stepCargoUnits = db.KolCargoes;
             #region search
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -27,15 +26,20 @@ namespace KolyadichiMVC.Controllers
                                                           || a.SmgsNumber.Contains(searchString));
             }
             #endregion
-            if (Request.HttpMethod != "GET")
+            if (searchString != null)
             {
                 page = 1;
             }
-            int pageSize = 12;
-            int pageNumber = (page ?? 1);
+            else
+            {
+                searchString = currentFilter;
+            }
 
-            //return View(stepCargoUnits.ToPagedList(pageNumber, pageSize));
-            return View(stepCargoUnits.ToList());
+            ViewBag.CurrentFilter = searchString;
+            int pageSize = 20;
+            int pageNumber = (page ?? 1);
+            //return View(db.PurchaseOrders.OrderBy(i => i.SomeProperty).ToPagedList(page ?? 1, 3));
+            return View(stepCargoUnits.OrderBy(i=>i.TransportNumber).ToPagedList(pageNumber, pageSize));
         }
 
         // GET: StepCargoes/Details/5

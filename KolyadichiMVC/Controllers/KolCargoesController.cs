@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KolyadichiMVC.Models;
+using PagedList;
 
 namespace KolyadichiMVC.Controllers
 {
@@ -15,9 +16,31 @@ namespace KolyadichiMVC.Controllers
         private xmlVagonsEntities db = new xmlVagonsEntities();
 
         // GET: KolCargoes
-        public ActionResult Index()
+        public ActionResult Index(string searchString, string currentFilter, int? page)
         {
-            return View(db.KolCargoes.ToList());
+            var kolCargoUnits = from s in db.KolCargoes select s;
+            #region search
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                kolCargoUnits = kolCargoUnits.Where(a => a.RegistrationNumber.Contains(searchString)
+                                                          || a.SmgsNumber.Contains(searchString));
+            }
+            #endregion
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+            int pageSize = 20;
+            int pageNumber = (page ?? 1);
+
+            //return View(kolCargoUnits.ToPagedList(pageNumber, pageSize)); //old bad code
+            return View(kolCargoUnits.OrderBy(i => i.TransportNumber).ToPagedList(pageNumber, pageSize));
         }
 
         // GET: KolCargoes/Details/5
