@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KolyadichiXmlReaderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="StepKolCargo">
+    <Key>
+      <PropertyRef Name="CargoUnitID" />
+    </Key>
+    <Property Name="CargoUnitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar(max)" />
+    <Property Name="TransportNumber" Type="nvarchar(max)" />
+    <Property Name="SmgsNumber" Type="nvarchar(max)" />
+    <Property Name="SmgsDate" Type="nvarchar(max)" />
+    <Property Name="DeclarationNumber" Type="nvarchar(max)" />
+    <Property Name="DeclarationDate" Type="nvarchar(max)" />
+    <Property Name="AccountNumber" Type="nvarchar(max)" />
+    <Property Name="AccountDate" Type="nvarchar(max)" />
+    <Property Name="RegistrationNumber" Type="nvarchar(max)" />
+    <Property Name="RegistrationDate" Type="nvarchar(max)" />
+    <Property Name="TempDislocationNumber" Type="nvarchar(max)" />
+    <Property Name="TempDislocationDate" Type="nvarchar(max)" />
+    <Property Name="CargoStationId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="KolyadichiXmlReaderModelStoreContainer">
+    <EntitySet Name="StepKolCargo" EntityType="Self.StepKolCargo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
