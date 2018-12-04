@@ -12,7 +12,7 @@ namespace KolyadichiMVC.Models
     using System;
     using System.Collections.Generic;
     
-    public  class StepCargo
+    public partial class StepKolCargo
     {
         public int CargoUnitID { get; set; }
         public string FileName { get; set; }
@@ -27,5 +27,6 @@ namespace KolyadichiMVC.Models
         public string RegistrationDate { get; set; }
         public string TempDislocationNumber { get; set; }
         public string TempDislocationDate { get; set; }
+        public int CargoStationId { get; set; }
     }
 }

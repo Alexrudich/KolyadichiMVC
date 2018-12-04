@@ -16,7 +16,7 @@ namespace KolyadichiMVC
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "StepCargoes", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "StepKolCargoes", action = "Kolyadichi", id = UrlParameter.Optional }
             );
         }
     }

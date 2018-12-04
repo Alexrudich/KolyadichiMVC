@@ -161,9 +161,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KolCargoesController.cs" />
-    <Compile Include="Controllers\StepCargoesController.cs" />
+    <Compile Include="Controllers\StepKolCargoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,10 +180,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CargoUnitModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\KolCargo.cs">
-      <DependentUpon>CargoUnitModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StepCargo.cs">
+    <Compile Include="Models\StepKolCargo.cs">
       <DependentUpon>CargoUnitModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -244,13 +239,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\KolCargoes\Details.cshtml" />
-    <Content Include="Views\KolCargoes\Index.cshtml" />
-    <Content Include="Views\StepCargoes\Details.cshtml" />
-    <Content Include="Views\StepCargoes\Index.cshtml" />
+    <Content Include="Views\StepKolCargoes\Kolyadichi.cshtml" />
+    <Content Include="Views\StepKolCargoes\Stepyanka.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

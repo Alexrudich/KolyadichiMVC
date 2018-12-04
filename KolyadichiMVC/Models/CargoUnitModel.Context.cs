@@ -13,10 +13,10 @@ namespace KolyadichiMVC.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class xmlVagonsEntities : DbContext
+    public partial class KolyadichiXmlReaderEntities : DbContext
     {
-        public xmlVagonsEntities()
-            : base("name=xmlVagonsEntities")
+        public KolyadichiXmlReaderEntities()
+            : base("name=KolyadichiXmlReaderEntities")
         {
         }
     
@@ -25,7 +25,6 @@ namespace KolyadichiMVC.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<KolCargo> KolCargoes { get; set; }
-        public virtual DbSet<StepCargo> StepCargoes { get; set; }
+        public virtual DbSet<StepKolCargo> StepKolCargo { get; set; }
     }
 }

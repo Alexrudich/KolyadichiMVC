@@ -1,43 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="xmlVagonsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="KolCargo">
+<Schema Namespace="KolyadichiXmlReaderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="StepKolCargo">
     <Key>
       <PropertyRef Name="CargoUnitID" />
     </Key>
     <Property Name="CargoUnitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="FileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TransportNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="SmgsNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="SmgsDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DeclarationNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DeclarationDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="AccountNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="AccountDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="RegistrationNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="RegistrationDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TempDislocationNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TempDislocationDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TransportNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SmgsNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SmgsDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeclarationNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeclarationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccountDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RegistrationNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RegistrationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TempDislocationNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TempDislocationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CargoStationId" Type="Int32" Nullable="false" />
   </EntityType>
-  <EntityType Name="StepCargo">
-    <Key>
-      <PropertyRef Name="CargoUnitID" />
-    </Key>
-    <Property Name="CargoUnitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="FileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TransportNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="SmgsNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="SmgsDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DeclarationNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DeclarationDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="AccountNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="AccountDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="RegistrationNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="RegistrationDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TempDislocationNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TempDislocationDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityContainer Name="xmlVagonsEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="KolCargoes" EntityType="Self.KolCargo" />
-    <EntitySet Name="StepCargoes" EntityType="Self.StepCargo" />
+  <EntityContainer Name="KolyadichiXmlReaderEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="StepKolCargo" EntityType="Self.StepKolCargo" />
   </EntityContainer>
 </Schema>

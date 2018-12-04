@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - главная</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -19,8 +19,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Колядичи", "Index", "KolCargoes")</li>
-                    <li>@Html.ActionLink("Степянка", "Index", "StepCargoes")</li>
+                    <li>@Html.ActionLink("Колядичи", "Kolyadichi", "StepKolCargoes")</li>
+                    <li>@Html.ActionLink("Степянка", "Stepyanka", "StepKolCargoes")</li>
                 </ul>
             </div>
         </div>
